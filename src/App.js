@@ -1,9 +1,9 @@
 // App.jsx
-import React, { useState } from 'react';
-import JobUploadContainer from './components/Uploadcontainer';
-import JobFetchContainer from './components/Fetchcontainer';
-import Navbar from './components/Navbar';
-import Bottomnav from './components/Bottomnav';
+import React, { useState } from "react";
+import JobUploadContainer from "./components/Uploadcontainer";
+import JobFetchContainer from "./components/Fetchcontainer";
+import Navbar from "./components/Navbar";
+import Bottomnav from "./components/Bottomnav";
 
 const App = () => {
   const [jobs, setJobs] = useState([]);
@@ -15,10 +15,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <Navbar/>
+      <Navbar />
       <JobUploadContainer onJobUpload={handleJobUpload} />
       <JobFetchContainer jobs={jobs} />
-      <Bottomnav/>
+      <div style={{ position:"sticky"}}>
+        <Bottomnav />
+      </div>
     </div>
   );
 };

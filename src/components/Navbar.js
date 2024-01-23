@@ -1,10 +1,10 @@
 import React from 'react'
-
+import logo from './logo.png'
 function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg bg-dark text-white navbar-dark">
     <div class="container-fluid text-white">
-      <a class="navbar-brand" href="/">logo</a>
+      <a class="navbar-brand" href="/"><img src={logo} alt='logo' style={{borderRadius:"50%", height:"48px", width:"48px"}}/></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
