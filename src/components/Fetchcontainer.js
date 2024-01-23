@@ -8,7 +8,7 @@ const JobFetchContainer = ({ jobs }) => {
     <div class="card bg-dark text-white">
       <div class="card-body">
         <div className={styles["fetch-container"]}>
-          <h2>Job Profiles</h2>
+          <h2>Job Profiles:</h2>
           <ul>
             {jobs.map((job, index) => (
               <li key={index}>
