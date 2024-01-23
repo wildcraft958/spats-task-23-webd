@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React, { useState } from 'react';
+import JobUploadContainer from './components/Uploadcontainer';
+import JobFetchContainer from './components/Fetchcontainer';
+import Navbar from './components/Navbar';
+import Bottomnav from './components/Bottomnav';
 
-function App() {
+const App = () => {
+  const [jobs, setJobs] = useState([]);
+
+  const handleJobUpload = (jobData) => {
+    // Update the job list in the state
+    setJobs([...jobs, jobData]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar/>
+      <JobUploadContainer onJobUpload={handleJobUpload} />
+      <JobFetchContainer jobs={jobs} />
+      <Bottomnav/>
     </div>
   );
-}
+};
 
 export default App;
