@@ -18,7 +18,7 @@ const App = () => {
       <Navbar />
       <JobUploadContainer onJobUpload={handleJobUpload} />
       <JobFetchContainer jobs={jobs} />
-      <div style={{ position:"sticky"}}>
+      <div style={{ position:"relative", bottom:"0"}}>
         <Bottomnav />
       </div>
     </div>
