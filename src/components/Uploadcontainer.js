@@ -26,15 +26,17 @@ const JobUploadContainer = ({ onJobUpload }) => {
   return (
     <>
       <div className="upload-container">
-        <label>Job Type:</label>
-        <select value={jobType} onChange={(e) => setJobType(e.target.value)}>
+        <label>Job Type :</label>
+        <select value={jobType} onChange={(e) => setJobType(e.target.value)}
+                style={{backgroundColor:"#89929b", color:"white", margin:"10px"}}
+        >
           <option value="">Select</option>
           <option value="internship">Internship</option>
           <option value="job">Job</option>
           <option value="contract">Contract</option>
         </select>
       </div>
-      <div className={styles["job-type"]}>
+      <div className={styles["job-description"]} style={{alignItems:"center", margin:"10px", }}>
         <label>Job Description :</label>
         <textarea
           value={jobDescription}
@@ -42,14 +44,15 @@ const JobUploadContainer = ({ onJobUpload }) => {
           style={{backgroundColor:"#89929b", color:"white"}}
         />
       </div>
-      <label>Stipend:</label>
+      <label>Stipend :</label>
       <input
         type="text"
         value={stipend}
         onChange={(e) => setStipend(e.target.value)}
+        style={{backgroundColor:"#89929b", color:"white", margin:"10px"}}
       />
 
-      <button onClick={handleUpload}>Upload</button>
+      <button onClick={handleUpload} style={{margin:"16px"}} class="btn btn-outline-light">Upload</button>
     </>
   );
 };
